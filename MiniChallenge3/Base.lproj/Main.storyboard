@@ -632,17 +632,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uSI-eX-3Ch">
-                                <rect key="frame" x="20" y="126" width="360" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                        <color key="value" name="Yellow"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5Hg-sh-bCo">
                                 <rect key="frame" x="20" y="448" width="360" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -709,7 +698,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vT-q6-bEq">
-                                <rect key="frame" x="88" y="377" width="177" height="31"/>
+                                <rect key="frame" x="88" y="377" width="292" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -747,6 +736,26 @@
                                     <action selector="onClickSubjectBitton:" destination="tSE-rY-WiJ" eventType="touchUpInside" id="WpN-sa-lfm"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Title" minimumFontSize="20" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uSI-eX-3Ch" customClass="TextFieldFloatingPlaceholder" customModule="TextFieldFloatingPlaceholder">
+                                <rect key="frame" x="20" y="103" width="360" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" name="Yellow"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.90533739329999996" green="0.7886179686" blue="0.50188732150000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" systemColor="systemPurpleColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VOl-vn-XTu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -779,7 +788,6 @@
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H72-NH-7p5">
                                 <rect key="frame" x="20" y="636" width="358" height="37"/>
-                                <color key="backgroundColor" red="0.90533739329999996" green="0.7886179686" blue="0.50188732150000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.90588235289999997" green="0.7886179686" blue="0.50188732150000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -792,7 +800,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Add"/>
                                 <connections>
                                     <action selector="AddDateTime:" destination="N8C-Oi-9Gt" eventType="touchUpInside" id="zzh-gX-Uct"/>
-                                    <segue destination="UkD-Hq-ZDx" kind="unwind" unwindAction="calButton:" id="fzQ-15-gJA"/>
+                                    <segue destination="UkD-Hq-ZDx" kind="unwind" unwindAction="calButton:" id="1cf-pD-fKJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -825,8 +833,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your study group is ready to spread knowledge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4U-dG-2lP">
-                                <rect key="frame" x="53.5" y="660" width="307" height="57.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your study group is ready to spread knowledge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4U-dG-2lP">
+                                <rect key="frame" x="54" y="537" width="307" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -982,7 +990,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your joining request has been sent just wait for acceptance " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jd-fI-QBT">
-                                <rect key="frame" x="20" y="711.5" width="374" height="57.5"/>
+                                <rect key="frame" x="20" y="596" width="374" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -992,7 +1000,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5Jd-fI-QBT" firstAttribute="leading" secondItem="zyw-UM-tEG" secondAttribute="leading" constant="20" id="E2s-L1-PSt"/>
-                            <constraint firstItem="zyw-UM-tEG" firstAttribute="bottom" secondItem="5Jd-fI-QBT" secondAttribute="bottom" constant="93" id="L7d-Ae-ckI"/>
+                            <constraint firstItem="zyw-UM-tEG" firstAttribute="bottom" secondItem="5Jd-fI-QBT" secondAttribute="bottom" constant="208.5" id="L7d-Ae-ckI"/>
                             <constraint firstItem="zyw-UM-tEG" firstAttribute="trailing" secondItem="5Jd-fI-QBT" secondAttribute="trailing" constant="20" id="b0t-rQ-F5u"/>
                         </constraints>
                     </view>
@@ -1540,6 +1548,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

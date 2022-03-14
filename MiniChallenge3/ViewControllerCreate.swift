@@ -6,6 +6,8 @@
 //
 
 import UIKit
+//import TextFieldWrapper
+import TextFieldFloatingPlaceholder
 
 class CellClass: UITableViewCell {
 }
@@ -17,7 +19,7 @@ class ViewControllerCreate: UIViewController, UIStepperControllerDelegate { //Da
 //    }
     
 
-    @IBOutlet weak var studyGroupTitle: UITextField!
+    @IBOutlet weak var studyGroupTitle: TextFieldFloatingPlaceholder!
     
     @IBOutlet weak var studyGroupDes: UITextField!
     
@@ -45,19 +47,30 @@ class ViewControllerCreate: UIViewController, UIStepperControllerDelegate { //Da
         tableView.dataSource = self
         tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
 
-        
+        MainDateTime.text = mydata
         
         
         //Textfield for title
-        let bottomLine = CALayer()
+//        let bottomLine = CALayer()
+//
+//        bottomLine.frame = CGRect(x: 0, y: studyGroupTitle.frame.height - 2, width: studyGroupTitle.frame.width, height: 2)
+//
+//        bottomLine.backgroundColor = UIColor.init(named: "Yellow")?.cgColor //black.cgColor//init(named: "Yellow")?.cgColor
+//
+//        studyGroupTitle.borderStyle = .none
+//        studyGroupTitle.layer.addSublayer(bottomLine)
         
-        bottomLine.frame = CGRect(x: 0, y: studyGroupTitle.frame.height - 2, width: studyGroupTitle.frame.width, height: 2)
+        //studyGroupTitle.borderStyle = .roundedRect
+        studyGroupTitle.floatingPlaceholderColor = UIColor.red.withAlphaComponent(1)
+        studyGroupTitle.floatingPlaceholderMinFontSize = 10
+        studyGroupTitle.validation = { $0.count > 100 }
+        studyGroupTitle.validationFalseLineEditingColor = .blue
+        //studyGroupTitle.validationTrueLineEditingColor = .yellow
+        studyGroupTitle.borderStyle = .roundedRect
+        studyGroupTitle.validationFalseLineColor = .brown
+        //studyGroupTitle.validationTrueLineColor = .blue
         
-        bottomLine.backgroundColor = UIColor.init(named: "Yellow")?.cgColor //black.cgColor//init(named: "Yellow")?.cgColor
-        
-        studyGroupTitle.borderStyle = .none
-        studyGroupTitle.layer.addSublayer(bottomLine)
-        
+        //viewTap.addTarget(self, action: #selector(ViewController.tap))
         
         //Textfield for descrption
         let bottomLine2 = CALayer()
@@ -88,6 +101,11 @@ class ViewControllerCreate: UIViewController, UIStepperControllerDelegate { //Da
         self.view.addSubview(studentCount);
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func tap() {
+        studyGroupTitle.endEditing(true)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -124,7 +142,6 @@ class ViewControllerCreate: UIViewController, UIStepperControllerDelegate { //Da
     
     @IBAction func calButton(_ sender: UIStoryboardSegue) {
         MainDateTime.text = mydata
-
 
     }
     

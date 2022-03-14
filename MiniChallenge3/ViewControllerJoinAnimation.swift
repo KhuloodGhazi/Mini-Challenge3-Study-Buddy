@@ -16,7 +16,7 @@ class ViewControllerJoinAnimation: UIViewController {
         super.viewDidLoad()
 
         animationView2 = .init(name: "JoinG")
-        animationView2?.frame = view.bounds
+        animationView2?.frame = view.frame(forAlignmentRect: .init(x: -10, y: 100, width: 400, height: 400))
         animationView2?.loopMode = .loop
         animationView2?.animationSpeed = 0.5
         view.addSubview(animationView2!)

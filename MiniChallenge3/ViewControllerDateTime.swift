@@ -51,11 +51,13 @@ class ViewControllerDateTime: UIViewController {
     
     
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let choDate = segue.destination as? ViewControllerCreate {
-//            choDate.mydata =
-//        }
-//        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let choDate = segue.destination as? ViewControllerCreate {
+            var date1: String = ""
+            date1 = SlectedDateTime.text!
+            choDate.mydata = "\(String(describing: date1))"
+        }
+        }
     
     @IBAction func AddDateTime(_ sender: Any) {
 

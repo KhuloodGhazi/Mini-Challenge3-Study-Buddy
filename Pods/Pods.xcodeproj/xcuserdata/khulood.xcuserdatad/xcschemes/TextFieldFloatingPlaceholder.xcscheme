@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "81731D3AF6A1D03953A5A9E975715876"
-               BuildableName = "libPods-MiniChallenge3.a"
-               BlueprintName = "Pods-MiniChallenge3"
+               BlueprintIdentifier = "E7D0AE16FC1F09A12132617EF1E7E6B2"
+               BuildableName = "libTextFieldFloatingPlaceholder.a"
+               BlueprintName = "TextFieldFloatingPlaceholder"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

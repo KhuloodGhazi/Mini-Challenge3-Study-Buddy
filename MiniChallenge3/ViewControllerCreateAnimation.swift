@@ -18,7 +18,7 @@ class ViewControllerCreateAnimation: UIViewController {
         super.viewDidLoad()
         
         animationView = .init(name: "CreateG")
-        animationView?.frame = view.bounds
+        animationView?.frame = view.frame(forAlignmentRect: .init(x: -10, y: 100, width: 400, height: 400))
         animationView?.loopMode = .loop
         animationView?.animationSpeed = 0.5
         view.addSubview(animationView!)
